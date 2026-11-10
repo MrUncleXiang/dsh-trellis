@@ -49,12 +49,15 @@
     {
       "id": "push",
       "title": "只提交本任务文档并推送到用户仓库",
-      "status": "in_progress",
+      "status": "completed",
       "acceptance": [
         "推送目标为用户 origin",
         "远端分支与本地提交一致"
       ],
-      "verification": "ai"
+      "verification": "ai",
+      "verified": true,
+      "verifiedBy": "ai",
+      "verificationNotes": "已推送5份任务文档；主代理git ls-remote核对origin/codex/dsh-codex-maintenance与本地HEAD均为6abafbdf520af1eb126b97ef7508d458879dcd56。"
     },
     {
       "id": "approve",
