@@ -1,0 +1,66 @@
+{
+  "title": "建立插件维护分支并规划 DSH 与 Codex 接入",
+  "status": "planning",
+  "work": {
+    "type": "feat",
+    "mode": "standard",
+    "stage": "design",
+    "execution_lane": "standard"
+  },
+  "description": "保留当前 Trellis 工作流。已授权同步原作者主分支、建立维护分支、核对后推送到用户派生仓库；双助手接入先完成方案与独立审查，未经用户批准不改业务实现。不引入其他助手。",
+  "steps": [
+    {
+      "id": "sync",
+      "title": "同步上游并建立维护分支",
+      "status": "completed",
+      "acceptance": [
+        "主分支与核实的上游一致",
+        "使用 codex/ 分支",
+        "不丢失既有改动且不物理删除"
+      ],
+      "verification": "ai",
+      "verified": true,
+      "verifiedBy": "ai",
+      "verificationNotes": "主代理核对 main/upstream/main/origin/main/HEAD 均为 d30f232；工作分支为 codex/dsh-codex-maintenance，源码无本地修改。"
+    },
+    {
+      "id": "plan",
+      "title": "制定双助手接入与持续同步方案",
+      "status": "completed",
+      "acceptance": [
+        "明确共用任务逻辑和两个入口",
+        "明确升级合并与回退办法",
+        "列出审批、禁删、定制技能和同时写入保护"
+      ],
+      "verification": "ai",
+      "verified": true,
+      "verifiedBy": "ai",
+      "verificationNotes": "PRD、设计和仓库准备记录已完成；主代理检查原任务格式、持续同步与回退、两个入口及实施前置条件。"
+    },
+    {
+      "id": "review",
+      "title": "独立审查规划与仓库状态",
+      "status": "completed",
+      "verification": "ai",
+      "verified": true,
+      "verifiedBy": "ai",
+      "verificationNotes": "独立代理复审 design-review.md 首行为passed；初审五项已修正。"
+    },
+    {
+      "id": "push",
+      "title": "只提交本任务文档并推送到用户仓库",
+      "status": "in_progress",
+      "acceptance": [
+        "推送目标为用户 origin",
+        "远端分支与本地提交一致"
+      ],
+      "verification": "ai"
+    },
+    {
+      "id": "approve",
+      "title": "用户批准双助手实施方案",
+      "status": "pending",
+      "verification": "human"
+    }
+  ]
+}
